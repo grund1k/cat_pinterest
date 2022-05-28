@@ -1,13 +1,23 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import CatCard from "../../ui/cat-card/cat-card";
 import { StyledUl, StyledSection, StyledLi } from "./styles";
+import getCats from "../../../api/catsApi";
 
-function Cats({catsData}) {
+function Cats() {
+    const [cats, setCats] = useState();
+    const [page] = useState(1);
+
+    useEffect(() => {
+        getCats(page, 15).then(res => {
+            setCats(res);
+        })
+        }, [page])
+
     return (
         <StyledSection>
-            {catsData && catsData.length ? (
+            {cats && cats.length ? (
                 <StyledUl>
-                    {catsData.map( (catData) => (
+                    {cats.map( (catData) => (
                         <StyledLi key={catData.id}>
                             <CatCard {...catData} />
                         </StyledLi>

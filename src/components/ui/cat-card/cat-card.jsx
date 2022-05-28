@@ -3,10 +3,10 @@ import { StyledImg, StyledDiv, StyledLikeWrapper } from "./styles";
 import Like from "../like/like";
 
 
-function CatCard({img, name}) {
+function CatCard({url}) {
     return (
         <StyledDiv>
-            <StyledImg src={img} alt={name} />
+            <StyledImg src={url}/>
             <StyledLikeWrapper>
                 <Like />
             </StyledLikeWrapper>

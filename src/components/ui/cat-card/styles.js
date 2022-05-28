@@ -3,7 +3,8 @@ import Img from "../../styled/img/img";
 
 export const StyledImg = styled(Img)`
     max-width: 225px;
-    min-height: 225px;
+    max-height: 225px;
+    height: 100%;
     object-fit: cover;
 `;
 
