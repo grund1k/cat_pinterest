@@ -1,10 +1,10 @@
 import React from "react";
 import Cats from "../blocks/cats/cats";
 
-function MainPage({catsData}) {
+function MainPage() {
     return (
         <>
-            <Cats catsData={catsData}/>
+            <Cats/>
         </>
     );
 }
