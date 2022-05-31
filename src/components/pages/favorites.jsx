@@ -1,9 +1,10 @@
 import React from "react";
+import Cats from "../blocks/cats/cats";
 
-function Favourites() {
+function Favourites({catsData, addToFavorite, removeFromFavorite}) {
     return (
         <>
-            <h1>Favourites</h1>
+            <Cats catsData={catsData} addToFavorite={addToFavorite} removeFromFavorite={removeFromFavorite}/>
         </>
     );
 }

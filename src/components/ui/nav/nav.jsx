@@ -5,7 +5,7 @@ function Nav({onTransfer}) {
     return(
         <StyledNav>
             <StyledNavWrapper>
-                <StyledNavLink to="/">Все котики</StyledNavLink>
+                <StyledNavLink to="/cat_pinterest">Все котики</StyledNavLink>
                 <StyledNavLink to="/favorites">Любимые котики</StyledNavLink>
             </StyledNavWrapper>
         </StyledNav>

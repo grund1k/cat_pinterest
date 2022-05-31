@@ -1,9 +1,9 @@
 import React from "react";
 import { LikeButton } from "./styles";
 
-function Like() {
+function Like({onClick, isLiked}) {
     return (
-        <LikeButton></LikeButton>
+        <LikeButton isLiked={isLiked} type="button" onClick={onClick}></LikeButton>
     )
 }
 

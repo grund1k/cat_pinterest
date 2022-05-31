@@ -5,12 +5,13 @@ import Section from "../../styled/section/section";
 export const StyledSection = styled(Section)`
     max-width: 1316px;
     margin: 0 auto;
+    padding-top: 36px;
 `;
 
 export const StyledUl = styled(Ul)`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    column-gap: 5px;
     row-gap: 33px;
 `;
 

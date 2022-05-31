@@ -6,7 +6,7 @@ import likeImageActive from "../../../assets/favorite.svg";
 export const LikeButton = styled(Button)`
     width: 48px;
     height: 48px;
-    background-image: url(${likeImage});
+    background-image: ${props => props.isLiked === true ? `url(${likeImageActive})` : `url(${likeImage})`};
 
     &:hover,
     &:focus {
