@@ -13,6 +13,10 @@ export const StyledUl = styled(Ul)`
     flex-wrap: wrap;
     column-gap: 5px;
     row-gap: 33px;
+
+    @media (max-width: 918px) {
+        justify-content: center;
+    }
 `;
 
 export const StyledLi = styled.li`
