@@ -8,7 +8,10 @@ import getCats from "../../api/catsApi";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [favoriteCats, setFavoriteCats] = useState(JSON.parse(localStorage.getItem('favoriteCats') || []));
+  const [favoriteCats, setFavoriteCats] = useState(() => {
+    const favoriteCats = localStorage.getItem("favoriteCats");
+    return favoriteCats ? JSON.parse(favoriteCats) : [];
+  });
   const [cats, setCats] = useState();
   const [page] = useState(1);
 
